@@ -40,6 +40,8 @@
                             {% else %}
                                 <h5 class="card-title">{{item.title}}</h5>
                             {% endif %}
+                            {{item.display_name}} (@{{item.account_name}})
+
                             <p class="card-text">{{item.content | safe}}</p>
                         
                         {% if item.link != '' %}

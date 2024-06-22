@@ -1,12 +1,11 @@
 {% macro cardItem(item) -%}
 <div class="card ">
     <div class="card-body">
-        {% if item.has_threads  %}
-            <a href="thread/{{item.item_id}}.html"><h5 class="card-title">{{item.title}}</h5></a>
-        
-        {% else %}
-            <h5 class="card-title">{{item.title}}</h5>
+        {% if item.title != "No title"%}
+        <h5 class="card-title">{{item.title}}</h5>
         {% endif %}
+        {{item.display_name}} (@{{item.account_name}})
+
         <p class="card-text">{{item.content | safe}}</p>
     
     {% if item.link != '' %}

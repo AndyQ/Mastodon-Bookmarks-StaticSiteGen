@@ -12,9 +12,12 @@ def thread_file( item_id ):
 def createItem( item ):
     content = item["content"].replace('class="invisible"', "").replace('class="ellipsis"', "")
     url = ""
-    title = "No Title"
+    title = "No title"
     hasThreads = False
     image = None
+
+    display_name = item["account"]["display_name"]
+    account_name = item["account"]["acct"]
 
     card = item.get('card', None)
     if card != None:
@@ -33,7 +36,7 @@ def createItem( item ):
     if os.path.exists( thread_file(item["id"])):
         hasThreads = True
         
-    ret = {"item_id": f"{item['id']}", "title": title, "content": content, "link": url, "image" : image, "has_threads": hasThreads}
+    ret = {"item_id": f"{item['id']}", "display_name" : display_name, "account_name" : account_name, "title": title, "content": content, "link": url, "image" : image, "has_threads": hasThreads}
     return ret
 
 
