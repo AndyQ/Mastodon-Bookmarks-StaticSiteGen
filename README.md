@@ -27,9 +27,9 @@ read:statuses
 - Submit it then click on the name of the Application you've just created.  
 You'll be able to copy the Access Token here.
 
-Copy the `backend/.env.dist` file to `backend/.env`
+Copy the `.env.dist` file to `.env`
 
-Edit the `backend/.env` file and set the MASTODON_ACCESS_TOKEN to your generated token
+Edit the `.env` file and set the MASTODON_ACCESS_TOKEN to your generated token
 
 ## Running
 
@@ -49,3 +49,16 @@ The application will create a couple of folders:
 - cache - this contains the cached json data from Mastodon
 - static_site - this contains the generated static site
 
+## Viewing the generated site
+
+To view the static site, you probably want to deploy it to a http server. 
+
+This is outside the scope of this site BUT if you want to preview it locally,
+you can run the build in python http.server:
+
+```
+cd static_site
+python -m http.server
+```
+
+Then access the site through your browser on <a target="_blank" href="http://localhost:8000">http://localhost:8000</a>

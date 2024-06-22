@@ -22,7 +22,7 @@ def generateMainPage(items):
         newItems.append( services.createItem(item) )
 
     template = env.get_template("home.html")
-    with open("static_site/home.html", "w") as f:
+    with open("static_site/index.html", "w") as f:
         f.write(template.render(items=newItems))
 
 def generateThreadPage(mainItem):
