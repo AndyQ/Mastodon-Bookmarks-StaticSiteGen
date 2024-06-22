@@ -1,0 +1,6 @@
+.vscode
+.env
+__pycache__
+cache
+venv
+static_site
