@@ -44,7 +44,7 @@ You can use the following flags to adjust the behaviour.
 
 use-local : Just refreshes the pages using the internal cache
 full-refresh :  Does a full refresh of all the threads
-```
+
 
 The application will create a couple of folders: 
 - cache - this contains the cached json data from Mastodon
