@@ -31,11 +31,12 @@ Copy the `.env.dist` file to `.env`
 
 Edit the `.env` file and set the MASTODON_ACCESS_TOKEN to your generated token
 
-## Running
+## Generating the site contents
 
-Run the application
+Run the application using:
 ```
 python app.py [--use-local] [-full-refresh]
+```
 
 By default, the app will download and just update any new favourites saved since the last update.
 
